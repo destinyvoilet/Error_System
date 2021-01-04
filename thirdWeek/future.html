@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>诗歌鉴赏</title>
+    <style>
+        myhead {
+            display: block;
+            padding: 30px;
+            font-size: 60px;
+            width: 100%;
+            background-image: url("img/true.jpg");
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+        body {
+            background-repeat: repeat;
+            background-position: right top;
+            background-image: url("img/background.jpg");
+            margin: 0;
+        } 
+        img.right {
+            position: absolute;
+            left: 1500px;
+            top: 138px;
+            margin: 0px 0%;
+            z-index: -1;
+            position: sticky;
+            overflow: scroll;
+        }
+        table{
+            text-align: center;
+            border-color: rgba(147, 201, 252,0.2);
+        }
+        td{
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 20%;
+            background-image: url("img/pink.jpg");
+            position: fixed;
+            height: 100%;
+            overflow: hidden;
+            font-size: 25px;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        
+        li a.active {
+
+            background-image: url("img/blue.jpg");
+            color:firebrick;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #555;
+            background-image: url("img/blue.jpg");
+            color: white;
+        }
+        div.transbox {
+            width: 100%;
+            height: 100%;
+            margin: 0px 0%;
+            background-color: #ffffff;
+            border: 1px solid #A292f2;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+        }
+        
+        div.transbox p {
+            margin: 30px 40px;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li><a href="inf.html">侠客行</a></li>
+        <li><a href="exp.html">春江花月夜</a></li>
+        <li><a href="future.html" class="active">你是人间的四月天</a></li>
+    </ul>
+    <div style="margin-left:20%;padding:0px 0px;height:1000px;">
+        <myhead>林徽因</myhead>
+        <table width=100% height="1200" border="1" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr height="150" id="fir">
+                    <td width=70%>
+                        <div class="transbox" height=100%>
+                            <br>
+                            <p>你是人间的四月天</p>
+                            <p>——一句爱的赞颂</p>
+                            <p>我说 你是人间的四月天；</p>
+                            <p>笑响点亮了四面风；</p>
+                            <p>轻灵在春的光艳中交舞着变。</p>
+                            <p>你是四月早天里的云烟，</p>
+                            <p>黄昏吹着风的软，星子在</p>
+                            <p>无意中闪，细雨点洒在花前。</p>
+                            <p>那轻，那娉婷，你是，</p>
+                            <p>鲜妍百花的冠冕你戴着，</p>
+                            <p>你是天真，庄严，</p>
+                            <p>你是夜夜的月圆。</p>
+                            <p>雪化后那片鹅黄，你像；</p>
+                            <p>新鲜初放芽的绿，你是；</p>
+                            <p>柔嫩喜悦，水光浮动着你梦期待中白莲。</p>
+                            <p>你是一树一树的花开，</p>
+                            <p>是燕在梁间呢喃，</p>
+                            <p>——你是爱，是暖，</p>
+                            <p>是希望，</p>
+                            <p>你是人间的四月天！</p>
+                        </div>
+                    </td>
+                    <td width=30%>
+                        <img src="img/pinkgirl.png" width="370" class="right" top=10px>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

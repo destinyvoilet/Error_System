@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>诗歌鉴赏</title>
+    <style>
+        myhead {
+            display: block;
+            padding: 30px;
+            font-size: 60px;
+            width: 100%;
+            background-image: url("img/true.jpg");
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+        body {
+            background-repeat: repeat;
+            background-position: right top;
+            background-image: url("img/background.jpg");
+            margin: 0;
+        } 
+        img.right {
+            position: absolute;
+            left: 1500px;
+            top: 138px;
+            margin: 0px 0%;
+            z-index: -1;
+            position: sticky;
+            overflow: scroll;
+        }
+        table{
+            text-align: center;
+            border-color: rgba(147, 201, 252,0.2);
+        }
+        td{
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 20%;
+            background-image: url("img/pink.jpg");
+            position: fixed;
+            height: 100%;
+            overflow: hidden;
+            font-size: 25px;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        
+        li a.active {
+
+            background-image: url("img/blue.jpg");
+            color:firebrick;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #555;
+            background-image: url("img/blue.jpg");
+            color: white;
+        }
+        div.transbox {
+            width: 100%;
+            height: 100%;
+            margin: 0px 0%;
+            background-color: #ffffff;
+            border: 1px solid #f2A2E2;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+        }
+        
+        div.transbox p {
+            margin: 30px 40px;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li><a href="inf.html">侠客行</a></li>
+        <li><a href="exp.html"  class="active">春江花月夜 </a></li>
+        <li><a href="future.html">你是人间的四月天</a></li>
+    </ul>
+    <div style="margin-left:20%;padding:0px 0px;height:800px;">
+        <myhead>张若虚</myhead>
+        <table width=100% height="1200" border="1" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr height="150" id="fir">
+                    <td width=70%>
+                        <div class="transbox" height=100%>
+                            <p>春江潮水连海平，海上明月共潮生。</p>
+                            <p>滟滟随波千万里，何处春江无月明！</p>
+                            <p>江流宛转绕芳甸，月照花林皆似霰。</p>
+                            <p>空里流霜不觉飞，汀上白沙看不见。</p>
+                            <p>江天一色无纤尘，皎皎空中孤月轮。</p>
+                            <p>江畔何人初见月？江月何年初照人？</p>
+                            <p>人生代代无穷已，江月年年望相似。</p>
+                            <p>不知江月待何人，但见长江送流水。</p>
+                            <p>白云一片去悠悠，青枫浦上不胜愁。</p>
+                            <p>谁家今夜扁舟子？何处相思明月楼？</p>
+                            <p>可怜楼上月徘徊，应照离人妆镜台。</p>
+                            <p>玉户帘中卷不去，捣衣砧上拂还来。</p>
+                            <p>此时相望不相闻，愿逐月华流照君。</p>
+                            <p>鸿雁长飞光不度，鱼龙潜跃水成文。</p>
+                            <p>昨夜闲潭梦落花，可怜春半不还家。</p>
+                            <p>江水流春去欲尽，江潭落月复西斜。</p>
+                            <p>斜月沉沉藏海雾，碣石潇湘无限路。</p>
+                            <p>不知乘月几人归，落月摇情满江树。</p>
+                        </div>
+                    </td>
+                    <td width=30%>
+                        <img src="img/bluegirl.png" width="350" class="right" top=10px>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
