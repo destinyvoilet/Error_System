@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>信息管理</title>
+</head>
+<style>
+   table {
+       width:100%;
+       border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid rgba(0, 0, 0, 0.514);
+    text-align: left;
+}
+</style>
+<script>
+function sort(){
+    var Tr=document.getElementsByTagName('tr');
+    for(var i=1;i<Tr.length;i++){
+        var num=Tr[i].cells;
+        num[0].innerHTML=i;
+}
+}
+
+   function createCell(name) {
+    var message = document.getElementById(name);
+    var textNode = document.createTextNode(message.value);
+    var cell = document.createElement("td");
+    cell.appendChild(textNode);
+    return cell;
+   }
+
+function createDeleteCell() {
+    var textNode = document.createTextNode("删除");
+    var deleteCell = document.createElement("a");
+    deleteCell.appendChild(textNode);
+    deleteCell.setAttribute("href", "javascript:void(0);");
+    deleteCell.setAttribute("id", "delete");
+
+    deleteCell.onclick = function () {
+        var parent = this.parentNode;
+        var tmp = parent = parent.parentNode;
+        parent = parent.parentNode;
+        parent.removeChild(tmp);
+        
+        sort();
+    }
+    var cell = document.createElement("td");
+    cell.appendChild(deleteCell);
+
+    return cell
+}
+
+   function addStudent(){
+       
+       var tab=document.getElementById("tab");
+       var nextRow=document.createElement("tr");
+
+       var num=tab.rows.length;
+       var textNode = document.createTextNode(num);
+
+       var cell1 = document.createElement("td");
+       cell1.setAttribute("id","nums");
+       cell1.appendChild(textNode);
+
+       nextRow.appendChild(cell1);
+       nextRow.appendChild(createCell("id"));
+       nextRow.appendChild(createCell("name"));
+       nextRow.appendChild(createDeleteCell());
+
+       nextRow.onmouseover = function () {
+        nextRow.style.backgroundColor="rgb(249,249,249)";
+    }
+
+    nextRow.onmouseout = function () {
+        nextRow.style.backgroundColor = "white"
+    }
+
+    tab.appendChild(nextRow);
+
+   }
+
+</script>
+<body>
+
+    <br>
+    <div style="width:100%;border: 0.1px solid rgba(0, 0, 0, 0.514) ;"></div>
+    <br>
+
+    <div id="input-box" class="text">
+        <input id="id" type="text" placeholder="请输入学号" name="id">
+        <input id="name" type="text" placeholder="请输入姓名" name="name">
+        <button id="add" onclick="addStudent()">添加</button>
+        <button id="keep">保存</button>
+    </div>
+    <br>
+    <div id="table-box">
+        <table class="table" id="tab">
+            <tr id="row0">
+                <th>#</th>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>操作</th>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

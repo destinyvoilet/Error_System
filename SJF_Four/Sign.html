@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>登录界面</title> 
+<style>
+    body 
+    {
+        background-color:rgb(74,55,74);
+    }
+
+    .login{
+        width: 300px;
+	    height: 300px;
+	    text-align: center;
+	    position: absolute;
+	    top: 250px;
+	    left: 600px;
+    }
+    
+    .login h1{
+        color: rgb(250, 246, 246);
+        text-shadow: 0 0 10px rgb(248, 247, 247),0 0 10px rgb(248, 245, 245);
+    }
+
+    input{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgb(45,45,63);
+        color: white;
+    }
+
+    .but{
+        width: 100%;
+        margin: 8px 0;
+        min-height:40px;
+		color:#fff;
+		font-size:20px;
+		background-color:#09F;
+		border-radius:5px;
+    }
+
+    </style>
+
+<script>
+    function LoginCheck()
+    {
+        var x=document.getElementById("text").value;
+        var y=document.getElementById("password").value;
+        if(x=="admin"&&y=="123456")
+        {
+	        var r=confirm("登录成功!");
+	        if (r==true){
+		         window.location.href="C:\\Users\\86183\\Desktop\\srtp项目\\第四周\\Information.html";
+	        }
+        }
+        else{
+            alert("登录失败!");
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="login" class="login">
+        <h1 >Login</h1>
+        <input  id="text" type="text"  />
+        <input  id="password" type="password"  />
+        <button class="but" name="登录" type="submit" value="登录" onclick="LoginCheck()"/>登录</button>
+        </div>
+</body>
+</html>
