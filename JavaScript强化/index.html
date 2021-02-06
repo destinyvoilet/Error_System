@@ -1,0 +1,49 @@
+<!--submite.htm-->
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>index</title> 
+<script type="text/javascript">
+var temp=0;
+	function del(obj) 
+	{
+        var row = obj.parentNode.parentNode;
+		row.parentNode.removeChild(row);
+		temp--;
+    } 
+	function add(number,name)
+	{
+		temp++;
+		var txt1=document.getElementById("number").value;
+		var txt2=document.getElementById("name").value;
+		var t_tr=document.getElementById("tb").insertRow(); t_tr.bgcolor="#eeeeee";
+		var t_td0=t_tr.insertCell(); t_td0.innerHTML=temp;
+		var t_td1=t_tr.insertCell(); t_td1.innerHTML=txt1;
+		var t_td2=t_tr.insertCell(); t_td2.innerHTML=txt2;
+		var t_td3=t_tr.insertCell(); t_td3.innerHTML='<input type="button" value="删除" onclick="del(this)">';
+	}
+</script>
+</head>
+
+<body>
+</style> 
+	<input type="text"  id="number" placeholder="学号" size="8" style="width:200px;height:30px" />
+	<input type="text"  id="name" placeholder="姓名" size="8" style="width:200px;height:30px" />
+	<button onclick="add(' ',' ');">添加</button>
+	<button onclick="add(' ',' ');">保存</button>
+	<h1></h1>
+	<table width="1400" border="1" bordercolor="#cccccc" id="tb" >
+		<tr>
+			<th align="left" >#</th>
+			<th align="left">学号</th>
+			<th align="left">姓名</th>
+			<th align="left">操作</a></th>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
