@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body{
+    background-color: rgb(79, 64, 110);
+}
+.login{
+ font-size: 30px;
+ font-weight: bold;
+ text-align: center;
+ line-height: 400px;
+ color: mintcream;
+}
+.mydiv{
+    margin-top: 200px;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top:70px;
+    left: 43.5%;
+}
+.b{
+    margin-top: 200px;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top:165px;
+    left: 43.6%;
+}
+#name{
+    color: seashell;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    background-color: rgba(53, 5, 53, 0.271);
+    border-style:hidden;
+}
+#key{
+    color: seashell;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    background-color: rgba(53, 5, 53, 0.271);
+    border-style:hidden;
+}
+#in{
+    font-weight: bold;
+    color: seashell;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    background-color: royalblue;
+    border-style: hidden;
+}
+</style>
+</head>
+<body>
+<p class="login">
+Login<br>
+</p>
+
+<p>
+<div class="mydiv">
+    <td><input type="name" name="name" id='name'></td><br><br>
+    <td><input type="key" name="key" id='key'></td>
+</div>
+
+<div class="b">
+<button type="button" onclick="myFunction()" id='in'>登录</button>
+</div>
+
+</p>
+<script>
+    function myFunction(){
+        var name = document.getElementById("name").value;
+        var key=document.getElementById("key").value;
+        if(name=="admin" && key==123456){
+        window.alert("登陆成功");
+        window.location = "student.html";
+        }
+        else{
+            window.alert("登陆失败");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    .mt{
+        border-radius: 0.5px solid rgb(8, 8, 8);
+        border-bottom: 0.5px solid black;
+    }
+</style>
+</head>
+<body>
+	
+<p>
+    <td><input type="id" name="id" id='id'></td>
+    <td><input type="name" name="name" id='name'></td>
+    <button type="button" onclick="myFunction()" id='in'>添加</button>
+    <button type="button" onclick="myFunction()" id='in'>保存</button>
+</p>
+<table class="mt" cellspacing="0">
+    <thead>
+    <tr>
+        <th>#&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+        <th>学号&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+        <th>姓名&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+        <th>操作&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>
+    </tr>
+</thead>
+    <tbody id="tbMain"></tbody> 
+</table>
+<script type="text/javascript">
+    var n=0;
+    function myFunction(){
+    n=n+1;
+    var id=document.getElementById("id").value;
+    var name = document.getElementById("name").value;
+    var per = {n:n,id:id,name:name}; 
+    var tbody = document.getElementById('tbMain'); 
+    var trow = getDataRow(per); 
+    tbody.appendChild(trow); 
+    } 
+ function getDataRow(h){ 
+   var row = document.createElement('tr'); 
+   var nCell = document.createElement('td'); 
+   nCell.innerHTML = h.n; 
+   row.appendChild(nCell); 
+   var idCell = document.createElement('td');
+   idCell.innerHTML = h.id; 
+   row.appendChild(idCell); 
+   var nameCell = document.createElement('td');
+   nameCell.innerHTML = h.name; 
+   row.appendChild(nameCell); 
+   var delCell = document.createElement('td'); 
+   row.appendChild(delCell); 
+   var btnDel = document.createElement('input');  
+   btnDel.setAttribute('type','button'); 
+   btnDel.setAttribute('value','删除');  
+
+   btnDel.onclick=function(){ 
+     if(confirm("确定删除这一行嘛？")){  
+       this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); 
+       } 
+     } 
+   delCell.appendChild(btnDel); 
+   return row;  
+   }   
+</script>
+	
+</body>
+</html>
