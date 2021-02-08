@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加/删除</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        div.transbox {
+            font-size:20px;
+            width: 100%;
+            height: 100%;
+            margin-top:5%;
+        }
+        table{width:100%}
+table.dictionaryList tr:nth-child(2n+3){
+	background-color:#c0e0f7;
+}
+table.dictionaryList tr:nth-child(2n+2){
+	background-color:#defcfe;
+}
+    </style>
+    <script>
+		var n=0;
+    function add(){
+		n=n+1;
+        var number = document.getElementById("number").value;
+        var name = document.getElementById("name").value;
+		var temp={n:n,number:number,name:name};
+		var tbody=document.getElementById('tab');
+		var newRow=New(temp);
+		tbody.appendChild(newRow);
+	}
+    function New(row){
+		var td_n=document.createElement('td');
+		td_n.innerHTML=row.n;
+		
+        var td_number = document.createElement('td');
+        td_number.innerHTML=row.number;
+ 
+        var td_name = document.createElement('td');
+        td_name.innerHTML=row.name;
+ 
+        var td_a = document.createElement('td');
+		var ele_a = document.createElement('input');
+		ele_a.setAttribute('type','button');
+		ele_a.setAttribute('value','删除');
+		ele_a.onclick=function(){
+			if(confirm("确定删除这一行嘛？")){  
+           this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); 
+        } 
+		}
+		td_a.appendChild(ele_a);
+			
+		var ele_tr = document.createElement('tr');
+		ele_tr.appendChild(td_n);
+		ele_tr.appendChild(td_number);
+		ele_tr.appendChild(td_name);
+		ele_tr.appendChild(td_a);
+
+		return ele_tr;
+	}
+    </script>
+</head>
+<body>
+    <div class="transbox" height=100% >
+        <input id="number" type="text" name="xuehao">
+        <input id="name" type="text" name="name">
+        <input id="add" type="submit" value="添加" onclick="add()">
+        <input id="save" type="submit" value="保存">
+    </div>
+    <p></p>
+    <table border="1" cellspacing="0">
+		<thead>
+        <tr>
+          <td>#&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>学号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>操作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+	</thead>
+	<tbody id="tab"></tbody>
+	</table>
+</body>
+</html>

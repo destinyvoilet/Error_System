@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>登录界面</title>
+    <style>
+        body{
+            background-color: rgb(16, 16, 20);
+        }
+        h3{color: white;}
+        div.transbox {
+            text-align: center;
+            font-size:20px;
+            width: 100%;
+            height: 100%;
+            margin-top:15%;
+        }
+    </style>
+    <script>
+        function myFunction(){
+		var x = document.getElementById("password1").value;
+		var z=document.getElementById("text1").value;
+		var y = document.getElementById("password1");
+		if(x==""&&z==""){
+				window.alert("表格内不能为空");
+					}
+		else{
+			if(x=="123456"&&z=="admin"){
+                window.alert("登录成功");
+                window.location.href="跳转.html";
+				}
+				else if(x==""&&z=="admin"){
+
+					window.alert("您的密码不能为空");
+				
+				}
+				else if(x=="123456"&&z==""){
+
+					window.alert("您的用户名不能为空");
+				
+				}
+			else{
+				window.alert("登录失败")
+			}
+		}
+		
+	}
+    </script>
+</head>
+<body>
+    <div class="transbox" height=100% >
+    <h3>Login</h3>
+    <p><input id="text1" type="text" name="admin"></p>
+    <p><input id="password1" type="password" name="psd"></p>
+    <p><input id="submit1" type="submit" value="                  登录                  " onclick="myFunction()"></p>
+</div>
+</body>
+</html>
